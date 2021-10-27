@@ -1,7 +1,10 @@
 # 【Day 47】Number of Operations to Decrement Target to Zero
 https://binarysearch.com/problems/Number-of-Operations-to-Decrement-Target-to-Zero
 ## 思路
+题目要求去除数组nums的左右两端元素，并且去除的元素和为target，也就是留下中间的子数组，其和为sum(nums) - target;
+题目还要求去除的元素个数越小越好，也就是留下的中间子数组的长度越大越好;
 将删除和为target的最小次数，等价于保留若干和为 sum(nums) - target 的数。这样问题就转化为 求连续子数组和为 sum(A) - target 的最长子数组。求连续的数组可以用滑动窗口解决
+https://blog.csdn.net/qq_41726606/article/details/114663700
 ## 语法
 ## 代码
 ```python
