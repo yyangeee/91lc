@@ -6,7 +6,7 @@ https://leetcode-solution.cn/solutionDetail?type=3&id=53&max_id=2
 ## 语法
 1. sorted(iterable, cmp=None, key=None, reverse=False)
    key为用来进行比较的元素https://www.runoob.com/python/python-func-sorted.html
-2. >>> list(map(lambda x: x ** 2, [1, 2, 3, 4, 5]))   # 使用 lambda 匿名函数
+2. list(map(lambda x: x ** 2, [1, 2, 3, 4, 5]))   # 使用 lambda 匿名函数
    [1, 4, 9, 16, 25]
    list转化为列表https://www.runoob.com/python/python-func-map.html
 3. d.items()返回键值对
