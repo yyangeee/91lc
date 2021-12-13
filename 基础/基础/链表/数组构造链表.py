@@ -13,3 +13,5 @@ def list2link(List):
 if __name__ == "__main__":
     old_list = [1, 2, 3, 4, 5]
     link = list2link(old_list)
+# dict1 = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
+# print([i for i in dict1.values()][0])
