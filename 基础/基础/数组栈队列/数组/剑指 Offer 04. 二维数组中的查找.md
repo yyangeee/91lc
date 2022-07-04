@@ -1,7 +1,7 @@
 # 剑指 Offer 04. 二维数组中的查找
 https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/
 ## 思路
-左下角，向上是单调减小，向右是单调增加，所以从左下角便利
+左下角，向上是单调减小，向右是单调增加，所以从左下角遍历
 
 ## 学到的语法
 

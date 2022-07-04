@@ -1,10 +1,19 @@
-d={'a':1,'c':3,'b':2} 
-dict1 = {}   # 首先建一个字典d
-nums = [1,2,2,4,4,6,7,8,9]
-#d.items()返回的是： dict_items([('a', 1), ('c', 3), ('b', 2)])
-for i in range(len(nums)):
-    dict1[nums[i]] = dict1.setdefault(nums[i],0) + 1
-#d_order=sorted(dict1.items(),key=lambda x:x[1],reverse=False)  
-#print(d_order)
-print(d)                                                   
-print(list(dict1.values()))   
+
+from re import A, S
+
+
+def solution(A, S):
+    res = 0
+    for i in range(len(A)):
+        for j in range(i,len(A)):
+            total = sum(A[i:j+1])/(j-i+1)
+            if total == S:
+                res += 1
+    return res
+            
+    # write your code in Python 3.6
+    pass
+
+A = [2,1,3]
+S = 2
+print(solution(A,S))

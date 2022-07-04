@@ -17,13 +17,12 @@ class Solution:
         cur = head = ListNode()
         while l1 and l2:
             if l1.val < l2.val:
-                cur.next = l1
-                cur = cur.next
+                cur.next = l1               
                 l1 = l1.next
             else:
-                cur.next = l2
-                cur = cur.next 
+                cur.next = l                
                 l2 = l2.next
+            cur = cur.next 
         cur.next = l1 if l1 else l2
         return head.next
 #递归

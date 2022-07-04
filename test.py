@@ -1,28 +1,20 @@
 
-def intersect(nums1,nums2):
-    res = []
-    i,j = 0,0
-    while i<len(nums1) and j < len(nums2):
-
-        if nums1[i] < nums2[j]:
-
-            res.append(nums1[i])
-            i += 1
-        elif nums1[i] > nums2[j]:
-            res.append(nums2[j])
-            j += 1
-        else:
-            i += 1
-            j += 1
-        if i == len(nums1) and j != len(nums2):
-            res.append(nums2[j:])
-        if j == len(nums2) and i != len(nums1):
-            res.append(nums1[i:])
-    return res
-
-
-
-
-s1 = [1, 2, 4, 5, 7, 9]
-s2 = [1, 2, 5, 6, 9]
-print(intersect(s1, s2))
+nums = "abcbcbcabc"
+path = []
+res = []
+mapp = dict()
+def backtracking(nums,start):
+    # 收集子集，要先于终止判断
+    subnum = "".join(path)
+    mapp[subnum] = mapp.setdefault(subnum,0) + 1
+    # Base Case
+    if start == len(nums):
+        return
+    # 单层递归逻辑
+    for i in range(start,len(nums)):
+        path.append(nums[i])
+        backtracking(nums,i+1)
+        path.pop()
+backtracking(nums,0)
+a = sorted(mapp.items(), key=lambda x: x[1], reverse=True)
+print(a[0][1])

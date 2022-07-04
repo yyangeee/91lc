@@ -20,7 +20,7 @@ class Solution:
                 curnode = queue.pop(0)  # （默认移除列表最后一个元素）这里需要移除队列最头上的那个
                 in_list.append(curnode.val)
                 if curnode.left: 
-                    queue.append(curnode.left)
+                    queue.append(curnode.left)·
                 if curnode.right: 
                     queue.append(curnode.right)
             out_list.append(in_list)
